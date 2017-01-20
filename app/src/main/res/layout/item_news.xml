@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f3f3f3"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/newImg"
+        android:layout_toStartOf="@+id/newImg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4.5dp"
+            android:lineSpacingMultiplier="1"
+            android:singleLine="true"
+            android:maxLines="2"
+            android:text="中粮集团下属12家专业公司已实行混合所有制改革（附股）"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1"
+            android:maxLines="2"
+            android:text="2016年，中粮集团国有资本投资公司试点改革总体方案出台，目标是改组成为国有资本投资公司，管理模式从管资本、资产向管资本转型，生产运营商业模式向专业化公司转型，企业定位向承担国家粮食和食品安全的功能转型，发展模式向内涵式提质增效转型，将中粮集团打造成国际大粮商。"
+            android:textColor="#666666"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date"
+            android:text="04月24日"
+            android:textColor="#A1A8AD"
+            android:textSize="11sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="13dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/newImg"
+        android:layout_width="96dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>
