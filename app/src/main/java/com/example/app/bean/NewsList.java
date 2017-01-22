@@ -31,6 +31,10 @@ public class NewsList {
         private String time;
         private String title;
         private String topic;
+
+        private boolean isCheck;
+
+
         public void setDescrip(String descrip) {
             this.descrip = descrip;
         }
@@ -116,6 +120,14 @@ public class NewsList {
         }
         public String getTopic() {
             return topic;
+        }
+
+        public boolean getIsCheck() {
+            return isCheck;
+        }
+
+        public void setIsCheck(boolean isCheck) {
+            this.isCheck = isCheck;
         }
     }
 }

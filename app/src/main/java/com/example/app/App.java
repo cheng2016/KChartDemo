@@ -20,7 +20,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-        L.isDebug = AppUtils.getBooleanMetaData(this , DEBUG_MODE);
+//        L.isDebug = AppUtils.getBooleanMetaData(this , DEBUG_MODE);
     }
 
     public  synchronized static  App getInstance(){
