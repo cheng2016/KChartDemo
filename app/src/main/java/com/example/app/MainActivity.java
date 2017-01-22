@@ -38,6 +38,7 @@ public class MainActivity extends BaseActivity {
             NewsList response = (NewsList) event;
             mNewsAdapter = new NewsAdapter(response,this);
             mListView.setAdapter(mNewsAdapter);
+//            mNewsAdapter.notifyDataSetChanged();
         }
     }
 }

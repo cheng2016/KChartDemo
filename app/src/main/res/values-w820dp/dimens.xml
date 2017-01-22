@@ -1,6 +1,24 @@
-<resources>
-    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
-         (such as screen margins) for screens with more than 820dp of available width. This
-         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
-    <dimen name="activity_horizontal_margin">64dp</dimen>
+<resources>    <!-- Default screen margins, per the Android Design guidelines. -->    <dimen name="activity_horizontal_margin">40.96dp</dimen>
+    <dimen name="activity_vertical_margin">40.96dp</dimen>
+    <dimen name="dimen_3dp">7.68dp</dimen>
+    <dimen name="dimen_6dp">15.36dp</dimen>
+    <dimen name="dimen_10dp">25.6dp</dimen>
+    <dimen name="dimen_11dp">28.16dp</dimen>
+    <dimen name="dimen_12dp">30.72dp</dimen>
+    <dimen name="dimen_13dp">33.28dp</dimen>
+    <dimen name="dimen_14dp">35.84dp</dimen>
+    <dimen name="dimen_15dp">38.4dp</dimen>
+    <dimen name="dimen_16dp">40.96dp</dimen>
+    <dimen name="dimen_23dp">58.88dp</dimen>
+    <dimen name="dimen_79dp">202.24dp</dimen>
+    <dimen name="dimen_96dp">245.76dp</dimen>
+    <dimen name="dimen_105dp">268.8dp</dimen>
+    <dimen name="dimen_226dp">578.5600000000001dp</dimen>
+    <dimen name="dimen_10sp">25.6sp</dimen>
+    <dimen name="dimen_11sp">28.16sp</dimen>
+    <dimen name="dimen_12sp">30.72sp</dimen>
+    <dimen name="dimen_13sp">33.28sp</dimen>
+    <dimen name="dimen_14sp">35.84sp</dimen>
+    <dimen name="dimen_15sp">38.4sp</dimen>
+    <dimen name="dimen_16sp">40.96sp</dimen>
 </resources>

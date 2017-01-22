@@ -48,16 +48,15 @@ public class NewsAdapter extends BaseAdapter{
         return position;
     }
 
-    String ChangeDate(String date){
+    String ChangeDate(String s){
         String defaultDatePattern = "yyyy-MM-dd hh:mm";
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm");
-        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date date_temp = null;
+        DateFormat format = new SimpleDateFormat("MM月dd日");
+        Date date = null;
         String str = "";
-
         try {
-            date_temp  = sdf.parse(date);
-            str = format.format(date_temp);
+            date  = sdf.parse(s);
+            str = format.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -72,9 +71,9 @@ public class NewsAdapter extends BaseAdapter{
         convertView = inflater.inflate(R.layout.item_news,parent, false);
         //getView核心代码
         ViewHolder viewHolder =null;
-        if(convertView == null){
+        if(viewHolder == null){
             viewHolder = new ViewHolder();
-            viewHolder.titleTv = (TextView) convertView.findViewById(R.id.titleTv);
+            viewHolder.titleTv = (TextView) convertView.findViewById(R.id.title);
             viewHolder.contextTv = (TextView) convertView.findViewById(R.id.content);
             viewHolder.dateTv = (TextView) convertView.findViewById(R.id.date);
             viewHolder.newsImg = (ImageView) convertView.findViewById(R.id.newImg);
@@ -88,7 +87,7 @@ public class NewsAdapter extends BaseAdapter{
 //            viewHolder.titleTv.setText(bean.getTitle());
             setText(viewHolder.titleTv,bean.getTitle());
             setText(viewHolder.contextTv,bean.getDescrip());
-            setText(viewHolder.dateTv,ChangeDate(bean.getTitle()));
+            setText(viewHolder.dateTv,ChangeDate(bean.getTime()));
 //            viewHolder.contextTv.setText(bean.getDescrip());
 //            viewHolder.dateTv.setText(ChangeDate(bean.getTitle()));
             Picasso.with(context).load(bean.getImgsrc1()).fit()
@@ -112,4 +111,17 @@ public class NewsAdapter extends BaseAdapter{
         ImageView newsImg;
     }
 
+
+    public static void main(String[] args){
+        String s = "2017-01-22 09:40";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        try {
+            Date date = sdf.parse(s);
+            DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            String s1 = format.format(date);
+            System.out.print(s1);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
 }
