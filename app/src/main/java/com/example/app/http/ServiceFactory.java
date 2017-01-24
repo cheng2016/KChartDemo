@@ -69,11 +69,11 @@ public class ServiceFactory {
             //获取网络状态
             int netWorkState = NetUtils.getNetworkState(App.getInstance());
             //无网络，请求强制使用缓存
-//            if (netWorkState == NetUtils.NETWORK_NONE) {
+            if (netWorkState == NetUtils.NETWORK_NONE) {
                 request = request.newBuilder()
                         .cacheControl(CacheControl.FORCE_CACHE)
                         .build();
-//            }
+            }
 
             Response originalResponse = chain.proceed(request);
 
