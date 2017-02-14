@@ -9,10 +9,11 @@
     <ImageView
         android:id="@+id/newImg"
         android:layout_width="@dimen/widget_size_96"
-        android:layout_height="@dimen/widget_size_85"
-        android:layout_alignParentRight="true"
+        android:layout_height="@dimen/widget_size_79"
+        android:layout_toLeftOf="@+id/checkBox"
+        android:layout_toStartOf="@+id/checkBox"
         android:layout_centerVertical="true"
-        android:layout_marginRight="@dimen/widget_size_15" />
+         />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -20,8 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="@dimen/widget_size_15"
-        android:layout_toLeftOf="@+id/checkBox"
-        android:layout_toStartOf="@+id/checkBox"
+        android:layout_toLeftOf="@+id/newImg"
+        android:layout_toStartOf="@+id/newImg"
+        android:layout_marginRight="@dimen/widget_size_16"
         android:orientation="vertical">
 
         <TextView
@@ -30,11 +32,12 @@
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/widget_size_13"
             android:ellipsize="end"
+            android:maxLines="2"
             android:lineSpacingExtra="@dimen/widget_size_4"
             android:lineSpacingMultiplier="1"
             android:text="中粮集团下属12家专业公司已实行混合所有制改革（附股）"
             android:textColor="#333333"
-            android:textSize="@dimen/font_size_16"
+            android:textSize="@dimen/font_size_15"
             android:textStyle="bold" />
 
         <TextView
@@ -67,8 +70,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/newImg"
-        android:layout_toStartOf="@+id/newImg"
+
+        android:layout_alignParentRight="true"
         android:visibility="visible"
         android:text="" />
 </RelativeLayout>

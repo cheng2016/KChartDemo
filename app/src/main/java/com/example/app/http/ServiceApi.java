@@ -2,6 +2,7 @@ package com.example.app.http;
 
 import com.example.app.bean.NewsList;
 
+import okhttp3.ResponseBody;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -16,4 +17,8 @@ public interface ServiceApi {
     @GET("list")
     Observable<NewsList> getNewsList(@Query("req_funType") String funType,
                                            @Query("req_count") String count);
+
+    /*分时图url*/
+    @GET(Constant.DETAILURL)
+    Observable<ResponseBody> getMinutes(@Query("code") String code);
 }

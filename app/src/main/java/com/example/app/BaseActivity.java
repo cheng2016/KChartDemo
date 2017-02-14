@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -15,20 +16,16 @@ import org.greenrobot.eventbus.Subscribe;
 public abstract class BaseActivity extends AppCompatActivity{
     protected final static String TAG = "BaseActivity";
     private ProgressDialog mProgressDialog;
+    protected Toast mToast = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initView();
-        initData();
-        initEvent();
+        init();
     }
 
-    public abstract void initView();
 
-    public abstract void initData();
-
-    public abstract void initEvent();
+    public abstract void init();
 
     @Subscribe
     public  void onEventMainThread(Object event){
@@ -58,5 +55,14 @@ public abstract class BaseActivity extends AppCompatActivity{
     public void hideProgressDialog(){
         if(mProgressDialog!=null && mProgressDialog.isShowing())
             mProgressDialog.dismiss();
+    }
+
+    public void showToast(String content) {
+        if (mToast == null) {
+            mToast = Toast.makeText(this, content, Toast.LENGTH_SHORT);
+        } else {
+            mToast.setText(content);
+        }
+        mToast.show();
     }
 }

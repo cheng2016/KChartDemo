@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.app.bean.NewsList;
@@ -21,13 +22,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import app.example.com.firstdemo.R;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by penghuanliang
  * 2017/1/20
  */
 
-public class NewsAdapter extends BaseAdapter{
+public class NewsAdapter extends BaseAdapter {
     NewsList newsList;
     Context context;
 
@@ -36,7 +39,7 @@ public class NewsAdapter extends BaseAdapter{
         this.context = context;
     }
 
-    public void updataListView(NewsList newsList){
+    public void updataListView(NewsList newsList) {
         this.newsList = newsList;
         this.notifyDataSetChanged();
     }
@@ -56,14 +59,14 @@ public class NewsAdapter extends BaseAdapter{
         return position;
     }
 
-    String ChangeDate(String s){
+    String ChangeDate(String s) {
         String defaultDatePattern = "yyyy-MM-dd hh:mm";
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         DateFormat format = new SimpleDateFormat("MM月dd日");
         Date date = null;
         String str = "";
         try {
-            date  = sdf.parse(s);
+            date = sdf.parse(s);
             str = format.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -76,67 +79,72 @@ public class NewsAdapter extends BaseAdapter{
         //加载布局管理器
         LayoutInflater inflater = LayoutInflater.from(context);
         //将xml布局转换为view对象
-        convertView = inflater.inflate(R.layout.item_news,parent, false);
+        convertView = inflater.inflate(R.layout.item_news, parent, false);
         //getView核心代码
-        ViewHolder viewHolder =null;
-        if(viewHolder == null){
-            viewHolder = new ViewHolder();
-            viewHolder.titleTv = (TextView) convertView.findViewById(R.id.title);
-            viewHolder.contextTv = (TextView) convertView.findViewById(R.id.content);
-            viewHolder.dateTv = (TextView) convertView.findViewById(R.id.date);
-            viewHolder.newsImg = (ImageView) convertView.findViewById(R.id.newImg);
-            viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
+        ViewHolder viewHolder = null;
+        if (viewHolder == null) {
+            viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);//讲ViewHolder存储在View中
-        }else{
+        } else {
             viewHolder = (ViewHolder) convertView.getTag();//重获取viewHolder
         }
 
-        if(newsList!=null && newsList.getNews().size()>0){
+        if (newsList != null && newsList.getNews().size() > 0) {
             NewsList.News bean = newsList.getNews().get(position);
-//            viewHolder.titleTv.setText(bean.getTitle());
-            setText(viewHolder.titleTv,bean.getTitle());
-            setText(viewHolder.contextTv,bean.getDescrip());
-            setText(viewHolder.dateTv,ChangeDate(bean.getTime()));
-//            viewHolder.contextTv.setText(bean.getDescrip());
-//            viewHolder.dateTv.setText(ChangeDate(bean.getTitle()));
+            setText(viewHolder.title, bean.getTitle());
+            setText(viewHolder.content, bean.getDescrip());
+            setText(viewHolder.date, ChangeDate(bean.getTime()));
             Picasso.with(context).load(bean.getImgsrc1()).fit()
                     .placeholder(R.mipmap.ic_launcher)
                     .error(R.mipmap.ic_launcher)
-                    .into(viewHolder.newsImg);
+                    .into(viewHolder.newImg);
             viewHolder.checkBox.setChecked(bean.getIsCheck());
         }
 
         viewHolder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                L.i(NewsAdapter.class,"checkBox is change"+isChecked);
-                l.onChange(position,isChecked);
+                L.i(NewsAdapter.class, "checkBox is change" + isChecked);
+                l.onChange(position, isChecked);
             }
         });
         return convertView;
     }
 
-    void setText(TextView textView,String s){
-        if(TextUtils.isEmpty(s)){
+    void setText(TextView textView, String s) {
+        if (TextUtils.isEmpty(s)) {
             textView.setText("");
             return;
         }
         textView.setText(s);
     }
 
-    class ViewHolder{
-        TextView titleTv,contextTv,dateTv;
-        ImageView newsImg;
-        CheckBox checkBox;
-    }
-
     onCheckBoxClickListenr l;
 
-    public interface onCheckBoxClickListenr{
-        public void onChange(int position , boolean isChecked);
+    public interface onCheckBoxClickListenr {
+        public void onChange(int position, boolean isChecked);
     }
 
-    public void setOnCheckClickListenr(onCheckBoxClickListenr l){
+    public void setOnCheckClickListenr(onCheckBoxClickListenr l) {
         this.l = l;
+    }
+
+    class ViewHolder {
+        @Bind(R.id.newImg)
+        ImageView newImg;
+        @Bind(R.id.title)
+        TextView title;
+        @Bind(R.id.content)
+        TextView content;
+        @Bind(R.id.date)
+        TextView date;
+        @Bind(R.id.linearLayout)
+        LinearLayout linearLayout;
+        @Bind(R.id.checkBox)
+        CheckBox checkBox;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
     }
 }

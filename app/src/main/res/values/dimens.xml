@@ -3,7 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-
     <!--   ******************************Font******************************* -->
     <dimen name="font_size_10">10sp</dimen>
     <dimen name="font_size_11">11sp</dimen>
@@ -34,6 +33,7 @@
     <dimen name="widget_size_18">18dp</dimen>
     <dimen name="widget_size_19">19dp</dimen>
     <dimen name="widget_size_20">20dp</dimen>
+    <dimen name="widget_size_23">23dp</dimen>
     <dimen name="widget_size_25">25dp</dimen>
     <dimen name="widget_size_27">27dp</dimen>
     <dimen name="widget_size_30">30dp</dimen>
@@ -58,6 +58,7 @@
     <dimen name="widget_size_90">90dp</dimen>
     <dimen name="widget_size_96">96dp</dimen>
     <dimen name="widget_size_100">100dp</dimen>
+    <dimen name="widget_size_102">102dp</dimen>
     <dimen name="widget_size_110">110dp</dimen>
     <dimen name="widget_size_120">120dp</dimen>
     <dimen name="widget_size_130">130dp</dimen>
@@ -81,5 +82,8 @@
     <dimen name="widget_size_360">360dp</dimen>
     <dimen name="widget_size_370">370dp</dimen>
     <dimen name="widget_size_450">450dp</dimen>
+
+
+
 
 </resources>
