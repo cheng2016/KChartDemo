@@ -27,10 +27,16 @@ public class MainActivity extends BaseActivity implements NewsAdapter.onCheckBox
     ListView listView;
 
     @Override
-    public void init() {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         showProgressDialog("加载中...");
         HttpImpl.getInstance().getNewsList("100");
+    }
+
+    @Override
+    public void init() {
     }
 
     @Override
@@ -51,13 +57,6 @@ public class MainActivity extends BaseActivity implements NewsAdapter.onCheckBox
     public void onChange(int position, boolean isChecked) {
         L.i(MainActivity.class, "checkBox is change" + isChecked);
         mNewList.getNews().get(position).setIsCheck(isChecked);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 
     @OnClick(R.id.delete)
