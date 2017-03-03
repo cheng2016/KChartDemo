@@ -1,0 +1,86 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">12dp</dimen>
+    <dimen name="activity_vertical_margin">12dp</dimen>
+
+    <!--   ******************************Font******************************* -->
+    <dimen name="font_size_10">8sp</dimen>
+    <dimen name="font_size_11">8sp</dimen>
+    <dimen name="font_size_12">9sp</dimen>
+    <dimen name="font_size_13">10sp</dimen>
+    <dimen name="font_size_14">11sp</dimen>
+    <dimen name="font_size_15">11sp</dimen>
+    <dimen name="font_size_16">12sp</dimen>
+    <dimen name="font_size_17">13sp</dimen>
+    <dimen name="font_size_18">14sp</dimen>
+    <dimen name="font_size_20">15sp</dimen>
+    <dimen name="font_size_22">17sp</dimen>
+    <dimen name="font_size_24">18sp</dimen>
+    <dimen name="font_size_25">19sp</dimen>
+    <dimen name="font_size_40">30sp</dimen>
+    <!--   ******************************Widget******************************* -->
+    <dimen name="widget_size_2">2dp</dimen>
+    <dimen name="widget_size_3">2dp</dimen>
+    <dimen name="widget_size_4">3dp</dimen>
+    <dimen name="widget_size_5">4dp</dimen>
+    <dimen name="widget_size_6">5dp</dimen>
+    <dimen name="widget_size_8">6dp</dimen>
+    <dimen name="widget_size_10">8dp</dimen>
+    <dimen name="widget_size_12">9dp</dimen>
+    <dimen name="widget_size_13">10dp</dimen>
+    <dimen name="widget_size_15">11dp</dimen>
+    <dimen name="widget_size_16">12dp</dimen>
+    <dimen name="widget_size_18">14dp</dimen>
+    <dimen name="widget_size_19">14dp</dimen>
+    <dimen name="widget_size_20">15dp</dimen>
+    <dimen name="widget_size_23">17dp</dimen>
+    <dimen name="widget_size_25">19dp</dimen>
+    <dimen name="widget_size_27">20dp</dimen>
+    <dimen name="widget_size_30">23dp</dimen>
+    <dimen name="widget_size_32">24dp</dimen>
+    <dimen name="widget_size_35">26dp</dimen>
+    <dimen name="widget_size_40">30dp</dimen>
+    <dimen name="widget_size_42">32dp</dimen>
+    <dimen name="widget_size_45">34dp</dimen>
+    <dimen name="widget_size_48">36dp</dimen>
+    <dimen name="widget_size_49">37dp</dimen>
+    <dimen name="widget_size_50">38dp</dimen>
+    <dimen name="widget_size_51">38dp</dimen>
+    <dimen name="widget_size_52">39dp</dimen>
+    <dimen name="widget_size_55">41dp</dimen>
+    <dimen name="widget_size_60">45dp</dimen>
+    <dimen name="widget_size_65">49dp</dimen>
+    <dimen name="widget_size_70">53dp</dimen>
+    <dimen name="widget_size_75">56dp</dimen>
+    <dimen name="widget_size_79">59dp</dimen>
+    <dimen name="widget_size_80">60dp</dimen>
+    <dimen name="widget_size_85">64dp</dimen>
+    <dimen name="widget_size_90">68dp</dimen>
+    <dimen name="widget_size_96">72dp</dimen>
+    <dimen name="widget_size_100">75dp</dimen>
+    <dimen name="widget_size_102">77dp</dimen>
+    <dimen name="widget_size_110">83dp</dimen>
+    <dimen name="widget_size_120">90dp</dimen>
+    <dimen name="widget_size_130">98dp</dimen>
+    <dimen name="widget_size_140">105dp</dimen>
+    <dimen name="widget_size_150">113dp</dimen>
+    <dimen name="widget_size_160">120dp</dimen>
+    <dimen name="widget_size_170">128dp</dimen>
+    <dimen name="widget_size_180">135dp</dimen>
+    <dimen name="widget_size_190">143dp</dimen>
+    <dimen name="widget_size_200">150dp</dimen>
+    <dimen name="widget_size_220">165dp</dimen>
+    <dimen name="widget_size_230">173dp</dimen>
+    <dimen name="widget_size_240">180dp</dimen>
+    <dimen name="widget_size_250">188dp</dimen>
+    <dimen name="widget_size_260">195dp</dimen>
+    <dimen name="widget_size_270">203dp</dimen>
+    <dimen name="widget_size_290">218dp</dimen>
+    <dimen name="widget_size_300">225dp</dimen>
+    <dimen name="widget_size_320">240dp</dimen>
+    <dimen name="widget_size_350">263dp</dimen>
+    <dimen name="widget_size_360">270dp</dimen>
+    <dimen name="widget_size_370">278dp</dimen>
+    <dimen name="widget_size_450">338dp</dimen>
+</resources>
+
