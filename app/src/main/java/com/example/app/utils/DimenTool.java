@@ -15,15 +15,14 @@ public class DimenTool {
 
     public static void gen() {
 
-        File file = new File("D:/myworkspace/FirstDemo/app/src/main/res/values/dimens.xml");
-
+        File file = new File("./app/src/main/res/values/dimens.xml");
         BufferedReader reader = null;
-        StringBuilder sw240 = new StringBuilder();
         StringBuilder sw480 = new StringBuilder();
         StringBuilder sw600 = new StringBuilder();
         StringBuilder sw720 = new StringBuilder();
         StringBuilder sw800 = new StringBuilder();
         StringBuilder w820 = new StringBuilder();
+
 
         try {
             reader = new BufferedReader(new FileReader(file));
@@ -31,64 +30,44 @@ public class DimenTool {
             int line = 1;
 
             while ((tempString = reader.readLine()) != null) {
+
                 if (tempString.contains("</dimen>")) {
                     //tempString = tempString.replaceAll(" ", "");
                     String start = tempString.substring(0, tempString.indexOf(">") + 1);
                     String end = tempString.substring(tempString.lastIndexOf("<") - 2);
-                    Double num = Double.parseDouble
-                            (tempString.substring(tempString.indexOf(">") + 1,
-                                    tempString.indexOf("</dimen>") - 2));
+                    int num = Integer.valueOf(tempString.substring(tempString.indexOf(">") + 1, tempString.indexOf("</dimen>") - 2));
 
-                    sw240.append(start).append(num * 0.75).append(end).append("\r\n");
+                    sw480.append(start).append((int) Math.round(num * 0.6)).append(end).append("\n");
+                    sw600.append(start).append((int) Math.round(num * 0.75)).append(end).append("\n");
+                    sw720.append(start).append((int) Math.round(num * 0.9)).append(end).append("\n");
+                    sw800.append(tempString).append("\n");
+                    w820.append(tempString).append("\n");
 
-                    sw480.append(start).append(num * 1.5).append(end).append("\r\n");
-
-                    sw600.append(start).append(num * 1.87).append(end).append("\r\n");
-
-                    sw720.append(start).append(num * 2.25).append(end).append("\r\n");
-
-                    sw800.append(start).append(num * 2.5).append(end).append("\r\n");
-
-                    w820.append(start).append(num * 2.56).append(end).append("\r\n");
                 } else {
-                    sw240.append(tempString).append("");
-                    sw480.append(tempString).append("");
-                    sw600.append(tempString).append("");
-                    sw720.append(tempString).append("");
-                    sw800.append(tempString).append("");
-                    w820.append(tempString).append("");
+                    sw480.append(tempString).append("\n");
+                    sw600.append(tempString).append("\n");
+                    sw720.append(tempString).append("\n");
+                    sw800.append(tempString).append("\n");
+                    w820.append(tempString).append("\n");
                 }
                 line++;
             }
             reader.close();
-            System.out.println("<!--  sw240 -->");
-
-            System.out.println(sw240);
-
             System.out.println("<!--  sw480 -->");
-
             System.out.println(sw480);
-
             System.out.println("<!--  sw600 -->");
-
             System.out.println(sw600);
 
             System.out.println("<!--  sw720 -->");
-
             System.out.println(sw720);
-
             System.out.println("<!--  sw800 -->");
-
             System.out.println(sw800);
 
-            String sw240file = "D:/myworkspace/FirstDemo/app/src/main/res/values-sw240dp-land/dimens.xml";
-            String sw480file = "D:/myworkspace/FirstDemo/app/src/main/res/values-sw480dp-land/dimens.xml";
-            String sw600file = "D:/myworkspace/FirstDemo/app/src/main/res/values-sw600dp-land/dimens.xml";
-            String sw720file = "D:/myworkspace/FirstDemo/app/src/main/res/values-sw720dp-land/dimens.xml";
-            String sw800file = "D:/myworkspace/FirstDemo/app/src/main/res/values-sw800dp-land/dimens.xml";
-            String w820file = "D:/myworkspace/FirstDemo/app/src/main/res/values-w820dp/dimens.xml";
-
-            writeFile(sw240file, sw240.toString());
+            String sw480file = "./app/src/main/res/values-sw480dp-land/dimens.xml";
+            String sw600file = "./app/src/main/res/values-sw600dp-land/dimens.xml";
+            String sw720file = "./app/src/main/res/values-sw720dp-land/dimens.xml";
+            String sw800file = "./app/src/main/res/values-sw800dp-land/dimens.xml";
+            String w820file = "./app/src/main/res/values-w820dp/dimens.xml";
             writeFile(sw480file, sw480.toString());
             writeFile(sw600file, sw600.toString());
             writeFile(sw720file, sw720.toString());
@@ -115,6 +94,7 @@ public class DimenTool {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         out.close();
     }
 
