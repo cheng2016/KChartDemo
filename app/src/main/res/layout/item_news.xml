@@ -24,6 +24,7 @@
         android:layout_toLeftOf="@+id/newImg"
         android:layout_toStartOf="@+id/newImg"
         android:layout_marginRight="@dimen/widget_size_16"
+
         android:orientation="vertical">
 
         <TextView
@@ -35,6 +36,7 @@
             android:maxLines="2"
             android:lineSpacingExtra="@dimen/widget_size_4"
             android:lineSpacingMultiplier="1"
+            android:includeFontPadding="false"
             android:text="中粮集团下属12家专业公司已实行混合所有制改革（附股）"
             android:textColor="#333333"
             android:textSize="@dimen/font_size_15"
@@ -44,9 +46,10 @@
             android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/widget_size_6"
+            android:layout_marginTop="@dimen/widget_size_2"
             android:ellipsize="end"
             android:maxLines="1"
+            android:includeFontPadding="false"
             android:text="2016年，中粮集团国有资本投资公司试点改革总体方案出台，目标是改组成为国有资本投资公司，管理模式从管资本、资产向管资本转型，生产运营商业模式向专业化公司转型，企业定位向承担国家粮食和食品安全的功能转型，发展模式向内涵式提质增效转型，将中粮集团打造成国际大粮商。"
             android:textColor="#666666"
             android:textSize="@dimen/font_size_13"
@@ -60,6 +63,7 @@
             android:layout_marginBottom="@dimen/widget_size_13"
             android:layout_marginTop="@dimen/widget_size_6"
             android:text="04月24日"
+            android:includeFontPadding="false"
             android:textColor="#A1A8AD"
             android:textSize="@dimen/font_size_11" />
 
@@ -70,7 +74,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-
         android:layout_alignParentRight="true"
         android:visibility="visible"
         android:text="" />
