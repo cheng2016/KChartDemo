@@ -10,10 +10,9 @@
         android:id="@+id/newImg"
         android:layout_width="@dimen/widget_size_96"
         android:layout_height="@dimen/widget_size_79"
-        android:layout_toLeftOf="@+id/checkBox"
-        android:layout_toStartOf="@+id/checkBox"
         android:layout_centerVertical="true"
-         />
+        android:layout_toLeftOf="@+id/checkBox"
+        android:layout_toStartOf="@+id/checkBox" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -46,10 +45,10 @@
             android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/widget_size_2"
+            android:layout_marginTop="@dimen/widget_size_6"
             android:ellipsize="end"
-            android:maxLines="1"
             android:includeFontPadding="false"
+            android:maxLines="1"
             android:text="2016年，中粮集团国有资本投资公司试点改革总体方案出台，目标是改组成为国有资本投资公司，管理模式从管资本、资产向管资本转型，生产运营商业模式向专业化公司转型，企业定位向承担国家粮食和食品安全的功能转型，发展模式向内涵式提质增效转型，将中粮集团打造成国际大粮商。"
             android:textColor="#666666"
             android:textSize="@dimen/font_size_13"

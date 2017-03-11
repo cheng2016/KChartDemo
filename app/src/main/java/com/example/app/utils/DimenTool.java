@@ -46,24 +46,27 @@ public class DimenTool {
                     float num = Float.valueOf(tempString.substring(tempString.indexOf(">") + 1, tempString.indexOf("</dimen>") - 2));
 
                     //根据UI画布大小比例进行换算，UI图相对分辨率为1334x750
+					int density = 2;
+                    int width = 750 / density;
 
-                    sw200.append(start).append((int) Math.round(num * 0.53433)).append(end).append("\n");
-                    sw320.append(start).append((int) Math.round(num * 0.85333)).append(end).append("\n");
-                    sw360.append(start).append((int) Math.round(num * 0.96)).append(end).append("\n");
+                    sw200.append(start).append((int) Math.round(num * 213 / width)).append(end).append("\n");
+                    sw320.append(start).append((int) Math.round(num * 320 / width)).append(end).append("\n");
+                    sw360.append(start).append((int) Math.round(num * 360 / width)).append(end).append("\n");
 
-                    sw380.append(start).append((int) Math.round(num * 1.01333)).append(end).append("\n");
-                    sw410.append(start).append((int) Math.round(num * 1.09333)).append(end).append("\n");
+                    sw380.append(start).append((int) Math.round(num * 384 / width)).append(end).append("\n");
+                    sw410.append(start).append((int) Math.round(num * 410 / width)).append(end).append("\n");
 
-                    sw480.append(start).append((int) Math.round(num * 1.28)).append(end).append("\n");
-                    sw600.append(start).append((int) Math.round(num * 1.6)).append(end).append("\n");
-                    sw720.append(start).append((int) Math.round(num * 1.92)).append(end).append("\n");
+                    sw480.append(start).append((int) Math.round(num * 480 / width)).append(end).append("\n");
 
-                    sw760.append(start).append((int) Math.round(num * 2.02667)).append(end).append("\n");
-                    sw800.append(start).append((int) Math.round(num * 2.13333)).append(end).append("\n");
-                    sw900.append(start).append((int) Math.round(num * 2.4)).append(end).append("\n");
+                    sw600.append(start).append((int) Math.round(num * 600 / width)).append(end).append("\n");
+                    sw720.append(start).append((int) Math.round(num * 720 / width)).append(end).append("\n");
 
-                    sw1024.append(start).append((int) Math.round(num * 2.73066)).append(end).append("\n");
-                    sw1280.append(start).append((int) Math.round(num * 3.41333)).append(end).append("\n");
+                    sw760.append(start).append((int) Math.round(num * 768 / width)).append(end).append("\n");
+                    sw800.append(start).append((int) Math.round(num * 800 / width)).append(end).append("\n");
+                    sw900.append(start).append((int) Math.round(num * 900 / width)).append(end).append("\n");
+
+                    sw1024.append(start).append((int) Math.round(num * 1024 / width)).append(end).append("\n");
+                    sw1280.append(start).append((int) Math.round(num * 1280 / width)).append(end).append("\n");
 
 
                 } else{
