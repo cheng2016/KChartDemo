@@ -2,6 +2,11 @@
 ####2017年的第一个demo
 ![](screenshot/20170124_172724.png) 
 
+####屏幕适配参考链接
+[一分钟了解Android屏幕 ldpi mdpi hdpi xhdpi](http://www.2cto.com/kf/201506/404773.html)
+[Android屏幕大小适配问题解决](http://www.2cto.com/kf/201405/301671.html)
+[Android屏幕适配小技巧sw<n>dp](http://blog.csdn.net/chenzujie/article/details/9874859)
+
 
 ####推荐以下开源项目
 
