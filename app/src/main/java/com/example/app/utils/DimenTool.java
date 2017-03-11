@@ -47,7 +47,7 @@ public class DimenTool {
 
                     //根据UI画布大小比例进行换算，UI图相对分辨率为1334x750
 
-                    sw200.append(start).append((int) Math.round(num * 0.53334)).append(end).append("\n");
+                    sw200.append(start).append((int) Math.round(num * 0.53433)).append(end).append("\n");
                     sw320.append(start).append((int) Math.round(num * 0.85333)).append(end).append("\n");
                     sw360.append(start).append((int) Math.round(num * 0.96)).append(end).append("\n");
 
@@ -55,7 +55,6 @@ public class DimenTool {
                     sw410.append(start).append((int) Math.round(num * 1.09333)).append(end).append("\n");
 
                     sw480.append(start).append((int) Math.round(num * 1.28)).append(end).append("\n");
-
                     sw600.append(start).append((int) Math.round(num * 1.6)).append(end).append("\n");
                     sw720.append(start).append((int) Math.round(num * 1.92)).append(end).append("\n");
 
