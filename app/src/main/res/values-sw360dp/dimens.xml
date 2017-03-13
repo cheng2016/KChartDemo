@@ -19,6 +19,7 @@
     <dimen name="font_size_25">24sp</dimen>
     <dimen name="font_size_40">38sp</dimen>
     <!--   ******************************Widget******************************* -->
+    <dimen name="widget_size_1">1dp</dimen>
     <dimen name="widget_size_2">2dp</dimen>
     <dimen name="widget_size_3">3dp</dimen>
     <dimen name="widget_size_4">4dp</dimen>
@@ -26,7 +27,9 @@
     <dimen name="widget_size_6">6dp</dimen>
     <dimen name="widget_size_7">7dp</dimen>
     <dimen name="widget_size_8">8dp</dimen>
+    <dimen name="widget_size_9">9dp</dimen>
     <dimen name="widget_size_10">10dp</dimen>
+    <dimen name="widget_size_11">11dp</dimen>
     <dimen name="widget_size_12">12dp</dimen>
     <dimen name="widget_size_13">12dp</dimen>
     <dimen name="widget_size_14">13dp</dimen>
@@ -65,6 +68,7 @@
     <dimen name="widget_size_96">92dp</dimen>
     <dimen name="widget_size_100">96dp</dimen>
     <dimen name="widget_size_102">98dp</dimen>
+    <dimen name="widget_size_105">101dp</dimen>
     <dimen name="widget_size_110">106dp</dimen>
     <dimen name="widget_size_120">115dp</dimen>
     <dimen name="widget_size_130">125dp</dimen>
@@ -76,6 +80,7 @@
     <dimen name="widget_size_190">182dp</dimen>
     <dimen name="widget_size_200">192dp</dimen>
     <dimen name="widget_size_220">211dp</dimen>
+    <dimen name="widget_size_226">217dp</dimen>
     <dimen name="widget_size_230">221dp</dimen>
     <dimen name="widget_size_236">227dp</dimen>
     <dimen name="widget_size_240">230dp</dimen>

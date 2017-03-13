@@ -18,7 +18,8 @@ public class DimenTool {
 
         File file = new File("./app/src/main/res/values/dimens.xml");
         BufferedReader reader = null;
-        StringBuilder sw200 = new StringBuilder();
+        StringBuilder sw180 = new StringBuilder();
+        StringBuilder sw240 = new StringBuilder();
         StringBuilder sw320 = new StringBuilder();
         StringBuilder sw360 = new StringBuilder();
         StringBuilder sw380 = new StringBuilder();
@@ -46,10 +47,11 @@ public class DimenTool {
                     float num = Float.valueOf(tempString.substring(tempString.indexOf(">") + 1, tempString.indexOf("</dimen>") - 2));
 
                     //根据UI画布大小比例进行换算，UI图相对分辨率为1334x750
-					int density = 2;
+					int density = 2;//默认密度是160,设备默认密度是320,所以缩放因子是320/160
                     int width = 750 / density;
 
-                    sw200.append(start).append((int) Math.round(num * 213 / width)).append(end).append("\n");
+                    sw180.append(start).append((int) Math.round(num * 180 / width)).append(end).append("\n");
+                    sw240.append(start).append((int) Math.round(num * 240 / width)).append(end).append("\n");
                     sw320.append(start).append((int) Math.round(num * 320 / width)).append(end).append("\n");
                     sw360.append(start).append((int) Math.round(num * 360 / width)).append(end).append("\n");
 
@@ -70,7 +72,8 @@ public class DimenTool {
 
 
                 } else{
-                    sw200.append(tempString).append("\n");
+                    sw180.append(tempString).append("\n");
+                    sw240.append(tempString).append("\n");
                     sw320.append(tempString).append("\n");
                     sw360.append(tempString).append("\n");
                     sw380.append(tempString).append("\n");
@@ -99,7 +102,8 @@ public class DimenTool {
             System.out.println("<!--  sw1024 -->");
             System.out.println(sw1024);
 
-            String sw200file = "./app/src/main/res/values-sw200dp/dimens.xml";
+            String sw180file = "./app/src/main/res/values-sw180dp/dimens.xml";
+            String sw240file = "./app/src/main/res/values-sw240dp/dimens.xml";
             String sw320file = "./app/src/main/res/values-sw320dp/dimens.xml";
             String sw360file = "./app/src/main/res/values-sw360dp/dimens.xml";
             String sw380file = "./app/src/main/res/values-sw380dp/dimens.xml";
@@ -115,7 +119,8 @@ public class DimenTool {
             String sw1024file = "./app/src/main/res/values-sw1024dp/dimens.xml";
             String sw1280file = "./app/src/main/res/values-sw1280dp/dimens.xml";
 
-            writeFile(sw200file, sw200.toString());
+            writeFile(sw180file, sw180.toString());
+            writeFile(sw240file, sw240.toString());
             writeFile(sw320file, sw320.toString());
             writeFile(sw360file, sw360.toString());
             writeFile(sw380file, sw380.toString());
@@ -151,7 +156,6 @@ public class DimenTool {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         out.close();
     }
 

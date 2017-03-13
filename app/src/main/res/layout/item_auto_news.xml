@@ -1,80 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#f3f3f3"
-    android:orientation="vertical">
-
-
-    <ImageView
-        android:id="@+id/newImg"
-        android:layout_width="@dimen/widget_size_96"
-        android:layout_height="@dimen/widget_size_79"
-        android:layout_marginTop="@dimen/widget_size_13"
-        android:layout_marginBottom="@dimen/widget_size_13"
-        android:layout_toLeftOf="@+id/checkBox"
-        android:layout_toStartOf="@+id/checkBox" />
+    android:layout_height="@dimen/widget_size_105"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/widget_size_226"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_marginLeft="@dimen/widget_size_15"
-        android:layout_toLeftOf="@+id/newImg"
-        android:layout_toStartOf="@+id/newImg"
         android:layout_marginRight="@dimen/widget_size_16"
-
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/widget_size_13"
+            android:layout_marginTop="@dimen/widget_size_15"
             android:ellipsize="end"
-            android:maxLines="2"
+            android:includeFontPadding="false"
             android:lineSpacingExtra="@dimen/widget_size_4"
             android:lineSpacingMultiplier="1"
-            android:includeFontPadding="false"
+            android:maxLines="2"
             android:text="中粮集团下属12家专业公司已实行混合所有制改革（附股）"
             android:textColor="#333333"
-            android:textSize="@dimen/font_size_15"
+            android:textSize="@dimen/font_size_16"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/content"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/widget_size_6"
+            android:layout_height="@dimen/widget_size_20"
+            android:layout_marginTop="@dimen/widget_size_1"
             android:ellipsize="end"
+            android:gravity="center_vertical"
             android:includeFontPadding="false"
             android:maxLines="1"
             android:text="2016年，中粮集团国有资本投资公司试点改革总体方案出台，目标是改组成为国有资本投资公司，管理模式从管资本、资产向管资本转型，生产运营商业模式向专业化公司转型，企业定位向承担国家粮食和食品安全的功能转型，发展模式向内涵式提质增效转型，将中粮集团打造成国际大粮商。"
             android:textColor="#666666"
-            android:textSize="@dimen/font_size_13"
+            android:textSize="@dimen/font_size_14"
             android:textStyle="bold" />
 
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/widget_size_13"
-            android:layout_marginTop="@dimen/widget_size_6"
-            android:text="04月24日"
+            android:layout_height="@dimen/widget_size_19"
+            android:layout_marginBottom="@dimen/widget_size_15"
             android:includeFontPadding="false"
+            android:gravity="center_vertical"
+            android:text="04月24日"
             android:textColor="#A1A8AD"
             android:textSize="@dimen/font_size_11" />
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/newImg"
+        android:layout_marginTop="@dimen/widget_size_15"
+        android:layout_width="@dimen/widget_size_96"
+        android:layout_height="@dimen/widget_size_79"
+        android:layout_marginBottom="@dimen/widget_size_15"/>
+
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:visibility="visible"
-        android:text="" />
-</RelativeLayout>
+        android:layout_centerVertical="true"
+        android:text=""
+        android:visibility="visible" />
+</LinearLayout>
