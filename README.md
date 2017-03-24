@@ -1,9 +1,12 @@
-# YtFirstDemo
-####2017年的第一个demo
-![](screenshot/20170124_172724.png) 
+## YtFirstDemo
+
+![](screenshot/20170124_172724.png)
+
+### 2017年的第一个demo
 
 
-####屏幕适配参考链接
+
+#### 屏幕适配参考链接
 
 [一分钟了解Android屏幕 ldpi mdpi hdpi xhdpi](http://www.2cto.com/kf/201506/404773.html)
 
@@ -12,7 +15,7 @@
 [Android屏幕适配小技巧sw<n>dp](http://blog.csdn.net/chenzujie/article/details/9874859)
 
 
-####推荐以下开源项目
+####  推荐以下开源项目
 
 1.[picasso](https://github.com/square/picasso): 异步图片加载框架！！使用非常简单
 
