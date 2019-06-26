@@ -26,17 +26,17 @@ public class MainActivity extends BaseActivity implements NewsAdapter.onCheckBox
     @Bind(R.id.listView)
     ListView listView;
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        showProgressDialog("加载中...");
-        HttpImpl.getInstance().getNewsList("100");
+    public int getLayoutId() {
+        return R.layout.activity_main;
     }
 
     @Override
     public void init() {
+        showProgressDialog("加载中...");
+        HttpImpl.getInstance().getNewsList("300");
     }
 
     @Override

@@ -70,11 +70,14 @@ public class MinutesActivity extends BaseActivity {
     Integer sum = 0;
     List<Integer> listA, listB;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_minute);
-        ButterKnife.bind(this);
+    public int getLayoutId() {
+        return R.layout.activity_minute;
+    }
+
+    @Override
+    public void init() {
         initChart();
 
         stringSparseArray = setXLabels();
@@ -90,7 +93,7 @@ public class MinutesActivity extends BaseActivity {
 
                 barChart.highlightValue(new Highlight(h.getXIndex(), 0));
 
-               // lineChart.setHighlightValue(h);
+                // lineChart.setHighlightValue(h);
             }
 
             @Override
@@ -102,8 +105,8 @@ public class MinutesActivity extends BaseActivity {
             @Override
             public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
                 lineChart.highlightValue(new Highlight(h.getXIndex(), 0));
-               // lineChart.setHighlightValue(new Highlight(h.getXIndex(), 0));//此函数已经返回highlightBValues的变量，并且刷新，故上面方法可以注释
-                 //barChart.setHighlightValue(h);
+                // lineChart.setHighlightValue(new Highlight(h.getXIndex(), 0));//此函数已经返回highlightBValues的变量，并且刷新，故上面方法可以注释
+                //barChart.setHighlightValue(h);
             }
 
             @Override
@@ -132,12 +135,6 @@ public class MinutesActivity extends BaseActivity {
         for (int i = 0; i < 100; i++) {
             Log.e("OUT", listB.get(i) + "");
         }*/
-
-    }
-
-    @Override
-    public void init() {
-
     }
 
     private Integer fund(Integer a, Integer b) {

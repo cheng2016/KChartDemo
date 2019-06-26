@@ -9,21 +9,27 @@ import android.widget.Toast;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by Michael Smith on 2016/7/24.
  */
 
 public abstract class BaseActivity extends AppCompatActivity{
-    protected final static String TAG = "BaseActivity";
+    protected static String TAG = "BaseActivity";
     private ProgressDialog mProgressDialog;
     protected Toast mToast = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TAG = this.getClass().getSimpleName();
+        setContentView(getLayoutId());
+        ButterKnife.bind(this);
         init();
     }
 
+    public abstract int getLayoutId();
 
     public abstract void init();
 
@@ -41,6 +47,12 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onStop() {
         super.onStop();
         EventBus.getDefault().unregister(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ButterKnife.unbind(this);
     }
 
     public void showProgressDialog(String message) {

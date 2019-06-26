@@ -94,7 +94,7 @@ public class NewsAdapter extends BaseAdapter {
             setText(viewHolder.title, bean.getTitle());
             setText(viewHolder.content, bean.getDescrip());
             setText(viewHolder.date, ChangeDate(bean.getTime()));
-            Picasso.with(context).load(bean.getImgsrc1()).fit()
+            Picasso.with(context).load(bean.getImgsrc1().replace("http://111.13.63.2:9803","http://testdfs.csc108.com")).fit()
                     .placeholder(R.mipmap.ic_launcher)
                     .error(R.mipmap.ic_launcher)
                     .into(viewHolder.newImg);

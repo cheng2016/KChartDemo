@@ -74,17 +74,14 @@ public class KLineActivity extends BaseActivity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kline);
-        ButterKnife.bind(this);
-        initChart();
-        getOffLineData();
+    public int getLayoutId() {
+        return R.layout.activity_kline;
     }
 
     @Override
     public void init() {
-
+        initChart();
+        getOffLineData();
     }
 
 
