@@ -28,6 +28,13 @@
 5.[photoview](https://github.com/chrisbanes/PhotoView):图片随收拾的放大缩小
 
 
+### Contact Me
+
+- Github: github.com/cheng2016
+- Email: mitnick.cheng@outlook.com
+- QQ: 1102743539
+
+
 # License
 
     Copyright 2017 cheng2016,Inc.
